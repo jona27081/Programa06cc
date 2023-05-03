@@ -33,42 +33,6 @@ public class DAOVenta implements IDAOGeneral<Venta, Long> {
         return v;
     }
 
-    /*
-
-    @Override
-    public Venta update(Long id, Venta vN) {
-        Session session = HibernateUtil.getSession();
-        Transaction t = session.beginTransaction();
-        Venta v = findById(id);
-
-        if (v != null) {
-            session.update(vN);
-            t.commit();
-            session.close();
-            JOptionPane.showMessageDialog(null, "Venta Actualizada");
-        }
-
-        return vN;
-    }
-
-    @Override
-    public List<Venta> findAll() {
-        Session session = HibernateUtil.getSession();
-        Transaction t = session.beginTransaction();
-
-        Query query = session.createNativeQuery("SELECT * FROM Ventas", Venta.class);
-        List<Venta> lv = query.getResultList();
-        t.commit();
-        session.close();
-
-        if (lv == null) {
-            JOptionPane.showMessageDialog(null, "La base de datos se encuentra vacia", "Error", JOptionPane.ERROR_MESSAGE);
-            session.close();
-            return null;
-        }
-
-        return lv;
-    }*/
     @Override
     public boolean delete(Long id) {
         Session session = HibernateUtil.getSession();
